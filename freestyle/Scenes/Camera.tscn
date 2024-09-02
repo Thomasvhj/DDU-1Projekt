@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsxlqhwi66em"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q5vcn"]
+a = Vector2(-341, -192)
+b = Vector2(-342, 193)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eqtig"]
+a = Vector2(341, 192)
+b = Vector2(342, -191)
+
+[node name="Camera" type="Camera2D"]
+zoom = Vector2(1.685, 1.685)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_q5vcn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_eqtig")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddl5nvorvyxd6"
+path="res://.godot/imported/jump.wav-7b400c5e5b1365a8d437346ba7d035d0.sample"
+
+[deps]
+
+source_file="res://Textures/Platformer all assets/sounds/jump.wav"
+dest_files=["res://.godot/imported/jump.wav-7b400c5e5b1365a8d437346ba7d035d0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

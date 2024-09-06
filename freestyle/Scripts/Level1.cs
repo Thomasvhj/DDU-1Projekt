@@ -23,7 +23,7 @@ public partial class Level1 : Node2D
 		if(CameraX < 0){
 			CameraX = 0;
 		}
-		GD.Print("CamPos: "+ CameraX);
+		//GD.Print("CamPos: "+ CameraX);
 		Camera.Position = new Vector2(CameraX,0);
 			if (Input.IsActionJustPressed("switch"))
 			{

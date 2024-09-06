@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="3_kvpoc"]
 [ext_resource type="Texture2D" uid="uid://ba5r1vgpnioxp" path="res://Textures/Platformer all assets/sprites/world_tileset.png" id="3_swysi"]
 [ext_resource type="PackedScene" uid="uid://bft217hp2daqv" path="res://Scenes/hud.tscn" id="7_17mih"]
+[ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="7_2vn83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkjb3"]
 texture = ExtResource("1_6unc1")
@@ -302,3 +303,5 @@ position = Vector2(-66, -50)
 position = Vector2(-87, 145)
 
 [node name="HUD" parent="." instance=ExtResource("7_17mih")]
+[node name="Coin" parent="." instance=ExtResource("7_2vn83")]
+position = Vector2(36, -38)

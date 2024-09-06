@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bft217hp2daqv"]
+
+[ext_resource type="FontFile" uid="uid://dmk0v6084mj1t" path="res://Textures/Platformer all assets/fonts/PixelOperator8.ttf" id="1_vjirs"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="GameUI" type="Control" parent="."]
+layout_mode = 3
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Score" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 6.0
+offset_right = 1145.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.873773, 0.859507, 0, 1)
+theme_override_fonts/font = ExtResource("1_vjirs")
+theme_override_font_sizes/font_size = 28
+text = "SCORE: 0000"

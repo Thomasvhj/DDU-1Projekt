@@ -12,7 +12,8 @@ public partial class Coin : Area2D
 	public void _OnBodyEntered(Node2D other)
 	{
 		coin.Play("Pickup");
-		GetNode("CollisionShape2D").QueueFree();
+		GetNode<CollisionShape2D>("CollisionShape2D").QueueFree();
+		GetNode<Global>("/root/Global").ScoreAdd( 1 );
 	}
 	
 	public void _OnAnimationEnd()

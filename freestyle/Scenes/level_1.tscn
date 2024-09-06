@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bg1snubabhlgh"]
+[gd_scene load_steps=11 format=4 uid="uid://bg1snubabhlgh"]
 
 [ext_resource type="Texture2D" uid="uid://80acgnehvm4c" path="res://Textures/Sunnyland/World/tileset.png" id="1_6unc1"]
 [ext_resource type="Script" path="res://Scripts/Level1.cs" id="1_88clu"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctp8p8h0llo0r" path="res://Scenes/Player.tscn" id="2_h43uf"]
 [ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="3_kvpoc"]
 [ext_resource type="Texture2D" uid="uid://ba5r1vgpnioxp" path="res://Textures/Platformer all assets/sprites/world_tileset.png" id="3_swysi"]
+[ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="7_2vn83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkjb3"]
 texture = ExtResource("1_6unc1")
@@ -299,3 +300,6 @@ position = Vector2(-66, -50)
 
 [node name="Player2" parent="." instance=ExtResource("3_kvpoc")]
 position = Vector2(-87, 145)
+
+[node name="Coin" parent="." instance=ExtResource("7_2vn83")]
+position = Vector2(36, -38)

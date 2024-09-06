@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Level1 : Node2D
+public partial class LevelBP : Node2D
 {
 	CharacterBody2D Player1;
 	CharacterBody2D Player2;

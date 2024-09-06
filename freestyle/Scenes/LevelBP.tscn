@@ -1,16 +1,16 @@
-[gd_scene load_steps=12 format=4 uid="uid://bg1snubabhlgh"]
+[gd_scene load_steps=12 format=4 uid="uid://tttlni5bgspe"]
 
-[ext_resource type="Texture2D" uid="uid://80acgnehvm4c" path="res://Textures/Sunnyland/World/tileset.png" id="1_6unc1"]
-[ext_resource type="Script" path="res://Scripts/Level1.cs" id="1_88clu"]
-[ext_resource type="PackedScene" uid="uid://cjsxlqhwi66em" path="res://Scenes/Camera.tscn" id="2_2upsb"]
-[ext_resource type="PackedScene" uid="uid://ctp8p8h0llo0r" path="res://Scenes/Player.tscn" id="2_h43uf"]
-[ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="3_kvpoc"]
-[ext_resource type="Texture2D" uid="uid://ba5r1vgpnioxp" path="res://Textures/Platformer all assets/sprites/world_tileset.png" id="3_swysi"]
-[ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="7_2vn83"]
-[ext_resource type="PackedScene" uid="uid://bft217hp2daqv" path="res://Scenes/hud.tscn" id="7_17mih"]
+[ext_resource type="Script" path="res://Scripts/LevelBP.cs" id="1_epf1l"]
+[ext_resource type="PackedScene" uid="uid://cjsxlqhwi66em" path="res://Scenes/Camera.tscn" id="2_ismwp"]
+[ext_resource type="Texture2D" uid="uid://80acgnehvm4c" path="res://Textures/Sunnyland/World/tileset.png" id="3_r8vqw"]
+[ext_resource type="Texture2D" uid="uid://ba5r1vgpnioxp" path="res://Textures/Platformer all assets/sprites/world_tileset.png" id="4_poa14"]
+[ext_resource type="PackedScene" uid="uid://ctp8p8h0llo0r" path="res://Scenes/Player.tscn" id="5_sliud"]
+[ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="6_66w3l"]
+[ext_resource type="PackedScene" uid="uid://bft217hp2daqv" path="res://Scenes/hud.tscn" id="7_qahr0"]
+[ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="8_ai31q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkjb3"]
-texture = ExtResource("1_6unc1")
+texture = ExtResource("3_r8vqw")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
@@ -160,7 +160,7 @@ texture = ExtResource("1_6unc1")
 15:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_435lf"]
-texture = ExtResource("3_swysi")
+texture = ExtResource("4_poa14")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -287,22 +287,22 @@ physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_pkjb3")
 sources/1 = SubResource("TileSetAtlasSource_435lf")
 
-[node name="Level1" type="Node2D"]
-script = ExtResource("1_88clu")
+[node name="LevelBP" type="Node2D"]
+script = ExtResource("1_epf1l")
 
-[node name="Camera" parent="." instance=ExtResource("2_2upsb")]
+[node name="Camera" parent="." instance=ExtResource("2_ismwp")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AADq////AAADAAEAAADr////AAADAAEAAADs////AAADAAEAAADt////AAADAAEAAADu////AAADAAEAAADv////AAADAAEAAADw////AAADAAEAAADx////AAADAAEAAAD0////AAADAAEAAAD1////AAADAAEAAAD2////AAADAAEAAAD3////AAADAAEAAAD4////AAADAAEAAAD5////AAADAAEAAAD6////AAADAAEAAAD7////AAADAAEAAAD8////AAADAAEAAAD9////AAADAAEAAAD+////AAADAAEAAAAVAP//AAADAAEAAAAUAP//AAADAAEAAAATAP//AAADAAEAAAASAP//AAADAAEAAAARAP//AAADAAEAAAAQAP//AAADAAEAAAAPAP//AAADAAEAAAAOAP//AAADAAEAAAANAP//AAADAAEAAAAMAP//AAADAAEAAAALAP//AAADAAEAAAAKAP//AAADAAEAAAAJAP//AAADAAEAAAAIAP//AAADAAEAAAAHAP//AAADAAEAAAAGAP//AAADAAEAAAAFAP//AAADAAEAAAAEAP//AAADAAEAAAADAP//AAADAAEAAAACAP//AAADAAEAAAABAP//AAADAAEAAAAAAP//AAADAAEAAAD/////AAADAAEAAADz////AAADAAEAAADy////AAADAAEAAADp////AAADAAEAAADo////AAADAAEAAADn////AAADAAEAAAAWAP//AAADAAEAAAAXAP//AAADAAEAAAAYAP//AAADAAEAAAAZAP//AAADAAEAAAAaAP//AAADAAEAAAAbAP//AAADAAEAAADi/w0AAAARAAcAAADj/w0AAAARAAcAAADk/w0AAAARAAcAAADl/w0AAAARAAcAAADm/w0AAAARAAcAAADn/w0AAAARAAcAAADo/w0AAAARAAcAAADp/w0AAAARAAcAAADq/w0AAAARAAcAAADr/w0AAAARAAcAAADs/w0AAAARAAcAAADt/w0AAAARAAcAAADu/w0AAAARAAcAAADv/w0AAAARAAcAAADw/w0AAAARAAcAAADx/w0AAAARAAcAAADy/w0AAAARAAcAAADz/w0AAAARAAcAAAD0/w0AAAARAAcAAAD1/w0AAAARAAcAAAD2/w0AAAARAAcAAAD3/w0AAAARAAcAAAD4/w0AAAARAAcAAAD5/w0AAAARAAcAAAD6/w0AAAARAAcAAAD7/w0AAAARAAcAAAD8/w0AAAARAAcAAAD9/w0AAAARAAcAAAD+/w0AAAARAAcAAAD//w0AAAARAAcAAAAAAA0AAAARAAcAAAABAA0AAAARAAcAAAACAA0AAAARAAcAAAADAA0AAAARAAcAAAAEAA0AAAARAAcAAAAFAA0AAAARAAcAAAAGAA0AAAARAAcAAAAHAA0AAAARAAcAAAAIAA0AAAARAAcAAAAJAA0AAAARAAcAAAAKAA0AAAARAAcAAAALAA0AAAARAAcAAAAMAA0AAAARAAcAAAANAA0AAAARAAcAAAAOAA0AAAARAAcAAAAPAA0AAAARAAcAAAAQAA0AAAARAAcAAAARAA0AAAARAAcAAAASAA0AAAARAAcAAAATAA0AAAARAAcAAAAUAA0AAAARAAcAAAAVAA0AAAARAAcAAAAWAA0AAAARAAcAAAAXAA0AAAARAAcAAAAYAA0AAAARAAcAAAAZAA0AAAARAAcAAAAaAA0AAAARAAcAAAAbAA0AAAARAAcAAAAcAA0AAAARAAcAAAAdAA0AAAARAAcAAAAeAA0AAAARAAcAAAAcAP//AAADAAEAAAAdAP//AAADAAEAAAAeAP//AAADAAEAAAAfAP//AAADAAEAAAAgAP//AAADAAEAAAAhAP//AAADAAEAAAAiAP//AAADAAEAAAAjAP//AAADAAEAAAAkAP//AAADAAEAAAAlAP//AAADAAEAAAAfAA0AAAARAAcAAAAgAA0AAAARAAcAAAAhAA0AAAARAAcAAAAiAA0AAAARAAcAAAAjAA0AAAARAAcAAAAkAA0AAAARAAcAAAAlAA0AAAARAAcAAAAmAA0AAAARAAcAAAAnAA0AAAARAAcAAAA=")
 tile_set = SubResource("TileSet_7ilfd")
 
-[node name="Player" parent="." instance=ExtResource("2_h43uf")]
+[node name="Player" parent="." instance=ExtResource("5_sliud")]
 position = Vector2(-66, -50)
 
-[node name="Player2" parent="." instance=ExtResource("3_kvpoc")]
+[node name="Player2" parent="." instance=ExtResource("6_66w3l")]
 position = Vector2(-87, 145)
 
-[node name="HUD" parent="." instance=ExtResource("7_17mih")]
+[node name="HUD" parent="." instance=ExtResource("7_qahr0")]
 
-[node name="Coin" parent="." instance=ExtResource("7_2vn83")]
+[node name="Coin" parent="." instance=ExtResource("8_ai31q")]
 position = Vector2(36, -38)

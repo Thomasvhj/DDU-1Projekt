@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bft217hp2daqv"]
+[gd_scene load_steps=3 format=3 uid="uid://bft217hp2daqv"]
 
+[ext_resource type="Script" path="res://Scripts/Hud.cs" id="1_o8mei"]
 [ext_resource type="FontFile" uid="uid://dmk0v6084mj1t" path="res://Textures/Platformer all assets/fonts/PixelOperator8.ttf" id="1_vjirs"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_o8mei")
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3

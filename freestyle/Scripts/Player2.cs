@@ -31,7 +31,7 @@ public partial class Player2 : CharacterBody2D
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("ui_venstre", "ui_hojre", "ui_down", "ui_up");
+		Vector2 direction = Input.GetVector("ui_venstre", "ui_hojre", "ui_ned", "ui_up");
 		
 		if (direction.X > 0)
 		{

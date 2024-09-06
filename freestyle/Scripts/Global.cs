@@ -14,8 +14,8 @@ public partial class Global : Node
 	
 	public override void _Ready()
 	{
-		//var level1 = load("Scene path")
-		//var level2 = load("Scene path")
+	//simultaneousScene1 = ResourceLoader.Load<PackedScene>("res://levels/level1.tscn").Instantiate();
+	//simultaneousScene2 = ResourceLoader.Load<PackedScene>("res://levels/level2.tscn").Instantiate();
 	}
 	
 	public void ScoreAdd(int antal)
@@ -30,13 +30,13 @@ public partial class Global : Node
 	{
 		if(level == 0)
 		{
-			//get_tree().change_scene_to_packed(level1)
-			level = 1;
+		//GetTree().Root.AddChild(simultaneousScene1);
+		level = 1;
 		}
 		if(level == 1)
 		{
-			//get_tree().change_scene_to_packed(level2)
-			level = 2;
+		//GetTree().Root.AddChild(simultaneousScene2);	
+		level = 2;
 		}
 		P1Ready = false;
 		P2Ready = false;

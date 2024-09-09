@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://tttlni5bgspe"]
+[gd_scene load_steps=15 format=4 uid="uid://tttlni5bgspe"]
 
 [ext_resource type="Script" path="res://Scripts/LevelBP.cs" id="1_epf1l"]
 [ext_resource type="PackedScene" uid="uid://cjsxlqhwi66em" path="res://Scenes/Camera.tscn" id="2_ismwp"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="8_ai31q"]
 [ext_resource type="PackedScene" uid="uid://sago1bw2fm55" path="res://Scenes/Door1.tscn" id="9_gd1me"]
 [ext_resource type="PackedScene" uid="uid://c2jqdps02osfi" path="res://Scenes/Door2.tscn" id="10_kcvdy"]
+[ext_resource type="PackedScene" uid="uid://cg7tg8owtyrnx" path="res://Scenes/Spike.tscn" id="11_y5p1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkjb3"]
 texture = ExtResource("3_r8vqw")
@@ -335,6 +336,9 @@ position = Vector2(-28, -63)
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_kcvdy")]
 position = Vector2(-36, 161)
+
+[node name="Spike" parent="." instance=ExtResource("11_y5p1q")]
+position = Vector2(-225, -26)
 
 [connection signal="body_entered" from="Doors/Door2" to="." method="_OnBodyEntered"]
 [connection signal="body_exited" from="Doors/Door2" to="." method="_OnBodyExited"]

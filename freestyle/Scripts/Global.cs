@@ -28,18 +28,21 @@ public partial class Global : Node
 	{
 		if(P1Ready == true && P2Ready == true)
 	{
-		if(level == 0)
-		{
-		//GetTree().Root.AddChild(simultaneousScene1);
-		level = 1;
-		}
-		if(level == 1)
-		{
-		//GetTree().Root.AddChild(simultaneousScene2);	
-		level = 2;
-		}
+		if(score == 6){
+			if(level == 0)
+			{
+			//GetTree().Root.AddChild(simultaneousScene1);
+			level = 1;
+			}
+			if(level == 1)
+			{
+			//GetTree().Root.AddChild(simultaneousScene2);	
+			level = 2;
+			}
 		P1Ready = false;
 		P2Ready = false;
+		score = 0;
+		}
 	}
 	}
 }

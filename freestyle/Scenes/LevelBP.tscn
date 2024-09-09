@@ -298,22 +298,43 @@ script = ExtResource("1_epf1l")
 tile_map_data = PackedByteArray("AADq////AAADAAEAAADr////AAADAAEAAADs////AAADAAEAAADt////AAADAAEAAADu////AAADAAEAAADv////AAADAAEAAADw////AAADAAEAAADx////AAADAAEAAAD0////AAADAAEAAAD1////AAADAAEAAAD2////AAADAAEAAAD3////AAADAAEAAAD4////AAADAAEAAAD5////AAADAAEAAAD6////AAADAAEAAAD7////AAADAAEAAAD8////AAADAAEAAAD9////AAADAAEAAAD+////AAADAAEAAAAVAP//AAADAAEAAAAUAP//AAADAAEAAAATAP//AAADAAEAAAASAP//AAADAAEAAAARAP//AAADAAEAAAAQAP//AAADAAEAAAAPAP//AAADAAEAAAAOAP//AAADAAEAAAANAP//AAADAAEAAAAMAP//AAADAAEAAAALAP//AAADAAEAAAAKAP//AAADAAEAAAAJAP//AAADAAEAAAAIAP//AAADAAEAAAAHAP//AAADAAEAAAAGAP//AAADAAEAAAAFAP//AAADAAEAAAAEAP//AAADAAEAAAADAP//AAADAAEAAAACAP//AAADAAEAAAABAP//AAADAAEAAAAAAP//AAADAAEAAAD/////AAADAAEAAADz////AAADAAEAAADy////AAADAAEAAADp////AAADAAEAAADo////AAADAAEAAADn////AAADAAEAAAAWAP//AAADAAEAAAAXAP//AAADAAEAAAAYAP//AAADAAEAAAAZAP//AAADAAEAAAAaAP//AAADAAEAAAAbAP//AAADAAEAAADi/w0AAAARAAcAAADj/w0AAAARAAcAAADk/w0AAAARAAcAAADl/w0AAAARAAcAAADm/w0AAAARAAcAAADn/w0AAAARAAcAAADo/w0AAAARAAcAAADp/w0AAAARAAcAAADq/w0AAAARAAcAAADr/w0AAAARAAcAAADs/w0AAAARAAcAAADt/w0AAAARAAcAAADu/w0AAAARAAcAAADv/w0AAAARAAcAAADw/w0AAAARAAcAAADx/w0AAAARAAcAAADy/w0AAAARAAcAAADz/w0AAAARAAcAAAD0/w0AAAARAAcAAAD1/w0AAAARAAcAAAD2/w0AAAARAAcAAAD3/w0AAAARAAcAAAD4/w0AAAARAAcAAAD5/w0AAAARAAcAAAD6/w0AAAARAAcAAAD7/w0AAAARAAcAAAD8/w0AAAARAAcAAAD9/w0AAAARAAcAAAD+/w0AAAARAAcAAAD//w0AAAARAAcAAAAAAA0AAAARAAcAAAABAA0AAAARAAcAAAACAA0AAAARAAcAAAADAA0AAAARAAcAAAAEAA0AAAARAAcAAAAFAA0AAAARAAcAAAAGAA0AAAARAAcAAAAHAA0AAAARAAcAAAAIAA0AAAARAAcAAAAJAA0AAAARAAcAAAAKAA0AAAARAAcAAAALAA0AAAARAAcAAAAMAA0AAAARAAcAAAANAA0AAAARAAcAAAAOAA0AAAARAAcAAAAPAA0AAAARAAcAAAAQAA0AAAARAAcAAAARAA0AAAARAAcAAAASAA0AAAARAAcAAAATAA0AAAARAAcAAAAUAA0AAAARAAcAAAAVAA0AAAARAAcAAAAWAA0AAAARAAcAAAAXAA0AAAARAAcAAAAYAA0AAAARAAcAAAAZAA0AAAARAAcAAAAaAA0AAAARAAcAAAAbAA0AAAARAAcAAAAcAA0AAAARAAcAAAAdAA0AAAARAAcAAAAeAA0AAAARAAcAAAAcAP//AAADAAEAAAAdAP//AAADAAEAAAAeAP//AAADAAEAAAAfAP//AAADAAEAAAAgAP//AAADAAEAAAAhAP//AAADAAEAAAAiAP//AAADAAEAAAAjAP//AAADAAEAAAAkAP//AAADAAEAAAAlAP//AAADAAEAAAAfAA0AAAARAAcAAAAgAA0AAAARAAcAAAAhAA0AAAARAAcAAAAiAA0AAAARAAcAAAAjAA0AAAARAAcAAAAkAA0AAAARAAcAAAAlAA0AAAARAAcAAAAmAA0AAAARAAcAAAAnAA0AAAARAAcAAAA=")
 tile_set = SubResource("TileSet_7ilfd")
 
-[node name="Player" parent="." instance=ExtResource("5_sliud")]
-position = Vector2(-66, -50)
-
-[node name="Player2" parent="." instance=ExtResource("6_66w3l")]
-position = Vector2(-87, 145)
-
 [node name="HUD" parent="." instance=ExtResource("7_qahr0")]
 
-[node name="Coin" parent="." instance=ExtResource("8_ai31q")]
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin6" parent="Coins" instance=ExtResource("8_ai31q")]
+position = Vector2(49, 194)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("8_ai31q")]
+position = Vector2(-56, 190)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("8_ai31q")]
+position = Vector2(-151, 191)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("8_ai31q")]
+position = Vector2(119, -32)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("8_ai31q")]
+position = Vector2(-133, -36)
+
+[node name="Coin1" parent="Coins" instance=ExtResource("8_ai31q")]
 position = Vector2(36, -38)
 
-[node name="Door1" parent="." instance=ExtResource("9_gd1me")]
+[node name="Players" type="Node" parent="."]
+
+[node name="Player" parent="Players" instance=ExtResource("5_sliud")]
+position = Vector2(-66, -50)
+
+[node name="Player2" parent="Players" instance=ExtResource("6_66w3l")]
+position = Vector2(-87, 145)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door1" parent="Doors" instance=ExtResource("9_gd1me")]
 position = Vector2(-28, -63)
 
-[node name="Door2" parent="." instance=ExtResource("10_kcvdy")]
+[node name="Door2" parent="Doors" instance=ExtResource("10_kcvdy")]
 position = Vector2(-36, 161)
 
-[connection signal="body_entered" from="Door2" to="." method="_OnBodyEntered"]
-[connection signal="body_exited" from="Door2" to="." method="_OnBodyExited"]
+[connection signal="body_entered" from="Doors/Door2" to="." method="_OnBodyEntered"]
+[connection signal="body_exited" from="Doors/Door2" to="." method="_OnBodyExited"]

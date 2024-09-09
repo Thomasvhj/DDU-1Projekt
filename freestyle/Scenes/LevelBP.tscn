@@ -1,13 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://tttlni5bgspe"]
+[gd_scene load_steps=4 format=3 uid="uid://tttlni5bgspe"]
 
 [ext_resource type="Script" path="res://Scripts/LevelBP.cs" id="1_epf1l"]
 [ext_resource type="PackedScene" uid="uid://cjsxlqhwi66em" path="res://Scenes/Camera.tscn" id="2_ismwp"]
-[ext_resource type="PackedScene" uid="uid://ctp8p8h0llo0r" path="res://Scenes/Player.tscn" id="5_sliud"]
-[ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="6_66w3l"]
 [ext_resource type="PackedScene" uid="uid://bft217hp2daqv" path="res://Scenes/hud.tscn" id="7_qahr0"]
-[ext_resource type="PackedScene" uid="uid://u131ycffgn7c" path="res://Scenes/Coin.tscn" id="8_ai31q"]
-[ext_resource type="PackedScene" uid="uid://sago1bw2fm55" path="res://Scenes/Door1.tscn" id="9_gd1me"]
-[ext_resource type="PackedScene" uid="uid://c2jqdps02osfi" path="res://Scenes/Door2.tscn" id="10_kcvdy"]
 
 [node name="LevelBP" type="Node2D"]
 script = ExtResource("1_epf1l")
@@ -15,42 +10,3 @@ script = ExtResource("1_epf1l")
 [node name="Camera" parent="." instance=ExtResource("2_ismwp")]
 
 [node name="HUD" parent="." instance=ExtResource("7_qahr0")]
-
-[node name="Coins" type="Node" parent="."]
-
-[node name="Coin6" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(49, 194)
-
-[node name="Coin5" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(-56, 190)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(-151, 191)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(119, -32)
-
-[node name="Coin2" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(-133, -36)
-
-[node name="Coin1" parent="Coins" instance=ExtResource("8_ai31q")]
-position = Vector2(36, -38)
-
-[node name="Players" type="Node" parent="."]
-
-[node name="Player" parent="Players" instance=ExtResource("5_sliud")]
-position = Vector2(-66, -50)
-
-[node name="Player2" parent="Players" instance=ExtResource("6_66w3l")]
-position = Vector2(-87, 145)
-
-[node name="Doors" type="Node" parent="."]
-
-[node name="Door1" parent="Doors" instance=ExtResource("9_gd1me")]
-position = Vector2(-28, -62)
-
-[node name="Door2" parent="Doors" instance=ExtResource("10_kcvdy")]
-position = Vector2(-34, 150)
-
-[connection signal="body_entered" from="Doors/Door2" to="." method="_OnBodyEntered"]
-[connection signal="body_exited" from="Doors/Door2" to="." method="_OnBodyExited"]

@@ -14,8 +14,6 @@ public partial class Global : Node
 	
 	public override void _Ready()
 	{
-	//simultaneousScene1 = ResourceLoader.Load<PackedScene>("res://levels/level1.tscn").Instantiate();
-	//simultaneousScene2 = ResourceLoader.Load<PackedScene>("res://levels/level2.tscn").Instantiate();
 	}
 	
 	public void ScoreAdd(int antal)
@@ -27,22 +25,24 @@ public partial class Global : Node
 	public void SwitchLevel()
 	{
 		if(P1Ready == true && P2Ready == true)
-	{
-		if(score == 6){
-			if(level == 0)
-			{
-			//GetTree().Root.AddChild(simultaneousScene1);
-			level = 1;
+		{
+			if(score == 6){
+				if(level == 0)
+				{
+					//GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://Scenes/Level1.tscn").Instantiate());
+					//GetTree().Root.RemoveChild(ResourceLoader.Load<PacketScene>("res://Scenes/LevelBP.tscn").Instantiate());
+					level = 1;
+				}
+				if(level == 1)
+				{
+					//GetTree().Root.AddChild(ResourceLoader.Load<PackedScene>("res://Scenes/Level2.tscn").Instantiate());
+					//GetTree().Root.RemoveChild(ResourceLoader.Load<PacketScene>("res://Scenes/Level1.tscn").Instantiate());
+					level = 2;
+				}
+			P1Ready = false;
+			P2Ready = false;
+			score = 0;
 			}
-			if(level == 1)
-			{
-			//GetTree().Root.AddChild(simultaneousScene2);	
-			level = 2;
-			}
-		P1Ready = false;
-		P2Ready = false;
-		score = 0;
 		}
-	}
 	}
 }

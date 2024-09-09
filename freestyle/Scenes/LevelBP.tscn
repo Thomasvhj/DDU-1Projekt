@@ -331,10 +331,10 @@ position = Vector2(-87, 145)
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door1" parent="Doors" instance=ExtResource("9_gd1me")]
-position = Vector2(-28, -63)
+position = Vector2(-28, -62)
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_kcvdy")]
-position = Vector2(-36, 161)
+position = Vector2(-34, 150)
 
 [connection signal="body_entered" from="Doors/Door2" to="." method="_OnBodyEntered"]
 [connection signal="body_exited" from="Doors/Door2" to="." method="_OnBodyExited"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://sago1bw2fm55"]
 
 [ext_resource type="Script" path="res://Scripts/Door1.cs" id="1_0t156"]
-[ext_resource type="Texture2D" uid="uid://cnbpomy1cbjm1" path="res://Textures/ColorBoxArt/black.png" id="2_72bf5"]
+[ext_resource type="Texture2D" uid="uid://bw8h7gp58hq2w" path="res://Textures/Doors/Light door.png" id="2_nvsgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7btgo"]
 size = Vector2(29, 46)
@@ -11,9 +11,9 @@ z_index = -1
 script = ExtResource("1_0t156")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(14, 23)
-scale = Vector2(0.90625, 1.4375)
-texture = ExtResource("2_72bf5")
+position = Vector2(13, 21)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("2_nvsgx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(14, 23)

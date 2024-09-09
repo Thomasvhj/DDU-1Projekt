@@ -12,18 +12,19 @@ public partial class Hud : CanvasLayer
 		scoreLabel = GetNode<Label>("GameUI/Score");
 		globalVars = GetNode<Global>("/root/Global");
 		globalVars.ScoreChanged += _HandleScoreChange;
-		
-		GD.Print(globalVars);
 	}
 	public void _HandleScoreChange(string score)
 	{
-		if(int.Parse(score) < 10){
+		if(int.Parse(score) < 10)
+		{
 			score = "000" + score;
 		}
-		else if(int.Parse(score) < 100){
+		else if(int.Parse(score) < 100)
+		{
 			score = "00" + score;
 		}
-		else if(int.Parse(score) < 1000){
+		else if(int.Parse(score) < 1000)
+		{
 			score = "0" + score;
 		}
 		this.scoreLabel.Text = "SCORE: " + score;

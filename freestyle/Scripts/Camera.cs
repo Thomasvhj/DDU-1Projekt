@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public partial class LevelBP : Node2D
+public partial class Camera : Node2D
 {
 	CharacterBody2D Player1;
 	CharacterBody2D Player2;
-	Camera2D Camera;
+	Camera2D Cam;
 	Vector2 Player1pos;
 	Vector2 Player2pos;
 	
@@ -13,7 +13,7 @@ public partial class LevelBP : Node2D
 	{
 		Player1 = GetNode<CharacterBody2D>("Players/Player");
 		Player2 = GetNode<CharacterBody2D>("Players/Player2");
-		Camera = GetNode<Camera2D>("Camera");
+		Cam = GetNode<Camera2D>("Camera");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +24,7 @@ public partial class LevelBP : Node2D
 		CameraX = 0;
 		}
 		//GD.Print("CamPos: "+ CameraX);
-		Camera.Position = new Vector2(CameraX,0);
+		Cam.Position = new Vector2(CameraX,0);
 		if (Input.IsActionJustPressed("switch"))
 		{
 			Player1pos = Player1.Position;

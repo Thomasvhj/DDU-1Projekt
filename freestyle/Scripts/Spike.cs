@@ -23,11 +23,20 @@ public partial class Spike : Area2D
 		
 	}
 	
-	private void _OnBodyEntered(Node2D other){
+	private void _OnBodyEntered(Node2D other)
+	{
+		
+			// Chick if collisino comes from Player
+			
+			// other ??
+			GD.Print("Spike collision from: "+ other );
+			if ( other.Name == "Player"  || other.Name == "Player2") 
+			{
 			DeathTimer.Start();
 			Nspike.Play("death");
 			Death.Play();
-		}
+			}
+	}
 	
 	private void _OnDeathTimer(){
 		GetTree().ReloadCurrentScene();

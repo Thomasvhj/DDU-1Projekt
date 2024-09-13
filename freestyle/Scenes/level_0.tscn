@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Camera.cs" id="1_k8wrg"]
 [ext_resource type="PackedScene" uid="uid://cjsxlqhwi66em" path="res://Scenes/Camera.tscn" id="2_52dmu"]
-[ext_resource type="TileSet" uid="uid://6qjan7a3pse3" path="res://Tilemaps.tres" id="2_o5dy1"]
+[ext_resource type="TileSet" uid="uid://6qjan7a3pse3" path="res://Tiles&Animations/Tilemaps.tres" id="2_o5dy1"]
 [ext_resource type="PackedScene" uid="uid://ctp8p8h0llo0r" path="res://Scenes/Player.tscn" id="3_okeop"]
 [ext_resource type="PackedScene" uid="uid://sago1bw2fm55" path="res://Scenes/Door1.tscn" id="4_ml5cy"]
 [ext_resource type="PackedScene" uid="uid://qhr83ob7lv3d" path="res://Scenes/player_2.tscn" id="4_pbmam"]

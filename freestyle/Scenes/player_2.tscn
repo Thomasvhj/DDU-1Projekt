@@ -1,7 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://qhr83ob7lv3d"]
+[gd_scene load_steps=19 format=3 uid="uid://qhr83ob7lv3d"]
 
 [ext_resource type="Texture2D" uid="uid://14goyoyl6ols" path="res://Textures/Sunnyland/Player/player.png" id="1_mkxoo"]
 [ext_resource type="Script" path="res://Scripts/Player2.cs" id="1_oaasy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtxkr"]
+atlas = ExtResource("1_mkxoo")
+region = Rect2(0, 128, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3x3m"]
+atlas = ExtResource("1_mkxoo")
+region = Rect2(33, 128, 33, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxihf"]
 atlas = ExtResource("1_mkxoo")
@@ -53,6 +61,17 @@ region = Rect2(165, 32, 33, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pkpym"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtxkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3x3m")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxihf")
@@ -115,10 +134,8 @@ script = ExtResource("1_oaasy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pkpym")
-animation = &"Jump"
+animation = &"Run"
 autoplay = "Idle"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 9)

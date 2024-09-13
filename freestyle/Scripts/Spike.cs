@@ -22,8 +22,10 @@ public partial class Spike : Area2D
 	}
 	
 	private void _OnBodyEntered(Node2D other){
+			GD.Print(Node2D other);
 			DeathTimer.Start();
 			Nspike.Animation = "death";
+			GetNode<AudioStreamPlayer2D>("DeathSound").play();
 		}
 	
 	private void _OnDeathTimer(){

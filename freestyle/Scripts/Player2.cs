@@ -4,7 +4,7 @@ using System;
 public partial class Player2 : CharacterBody2D
 {
 	public const float Speed = 100.0f;
-	public const float JumpVelocity = -360.0f;
+	public const float JumpVelocity = -250.0f;
 	AnimatedSprite2D player;
 	
 	public override void _Ready()

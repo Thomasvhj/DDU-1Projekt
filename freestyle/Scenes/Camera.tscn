@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjsxlqhwi66em"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_q5vcn"]
-a = Vector2(-378, -216)
-b = Vector2(-378, 216)
+a = Vector2(-576, -325)
+b = Vector2(-576, 324)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eqtig"]
-a = Vector2(378, 216)
-b = Vector2(378, -216)
+a = Vector2(575, 324)
+b = Vector2(575, -323)
 
 [node name="Camera" type="Camera2D"]
-zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

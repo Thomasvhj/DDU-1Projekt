@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://cg7tg8owtyrnx"]
+
+[ext_resource type="Texture2D" uid="uid://cjfgmeh78imx" path="res://Textures/Spikes/Spike.png" id="1_i1tf7"]
+[ext_resource type="Script" path="res://Scripts/Spike.cs" id="1_o57pf"]
+[ext_resource type="Texture2D" uid="uid://dg5ivcsfg577g" path="res://Textures/Spikes/Spike1.png" id="2_etbpt"]
+[ext_resource type="Texture2D" uid="uid://dxvf7n53th40o" path="res://Textures/Spikes/Spike2.png" id="3_th6x7"]
+[ext_resource type="Texture2D" uid="uid://b324d6x0gkxbp" path="res://Textures/Spikes/Spike3.png" id="4_cdja8"]
+[ext_resource type="Texture2D" uid="uid://cclu7yaum04k8" path="res://Textures/Spikes/Spike4.png" id="5_qalp4"]
+[ext_resource type="Texture2D" uid="uid://b2rgnndqfbm21" path="res://Textures/Spikes/Spike0.png" id="6_8gphk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vekgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i1tf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_etbpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_th6x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cdja8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qalp4")
+}],
+"loop": false,
+"name": &"death",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8gphk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Spike" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 12
+script = ExtResource("1_o57pf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_vekgg")
+animation = &"death"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-6, 8, -6, 6, -5, 6, -5, 3, -4, 3, -4, 0, -3, 0, -3, -1, -2, -1, -2, -3, -1, -3, -1, -4, 1, -4, 1, -3, 2, -3, 2, -1, 3, -1, 3, 0, 4, 0, 4, 3, 5, 3, 5, 6, 6, 6, 6, 8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D/StaticBody2D"]
+polygon = PackedVector2Array(-5, 8, -5, 6, -4, 6, -4, 3, -3, 3, -3, 0, -2, 0, -2, -1, -1, -1, -1, -3, 1, -3, 1, -1, 2, -1, 2, 0, 3, 0, 3, 3, 4, 3, 4, 6, 5, 6, 5, 8)
+
+[node name="DeathTimer" type="Timer" parent="Area2D"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_OnBodyEntered"]
+[connection signal="timeout" from="Area2D/DeathTimer" to="Area2D" method="_OnDeathTimer"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://do2xfcuce6cvd"]
+[gd_scene load_steps=3 format=3 uid="uid://gsawrpw4aoep"]
 
 [ext_resource type="Script" path="res://Scripts/CanvasLayer.cs" id="1_p35vd"]
 [ext_resource type="FontFile" uid="uid://08d6c22lwmkn" path="res://Fonts/ARCADECLASSIC.TTF" id="2_phhs4"]

@@ -7,6 +7,7 @@ public partial class Spike : Area2D
 	Timer DeathTimer;
 	AnimatedSprite2D Nspike;
 	AudioStreamPlayer2D Death;
+	bool dead = false;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -32,14 +33,29 @@ public partial class Spike : Area2D
 			GD.Print("Spike collision from: "+ other );
 			if ( other.Name == "Player"  || other.Name == "Player2") 
 			{
-			DeathTimer.Start();
-			Nspike.Play("death");
-			Death.Play();
+				if(dead == false)
+				{
+					dead = true;
+					DeathTimer.Start();
+					Nspike.Play("death");
+					Death.Play();
+					if (other.Name == "Player")
+					{
+						GetNode<CharacterBody2D>("/root/Level0/Players/Player").SetPhysicsProcess(false);
+					}
+					if (other.Name == "Player2")
+					{
+						GetNode<CharacterBody2D>("/root/Level0/Players/Player2").SetPhysicsProcess(false);
+					}
+				}
 			}
 	}
 	
 	private void _OnDeathTimer(){
 		GetTree().ReloadCurrentScene();
+		dead = false;
+		GetNode<CharacterBody2D>("/root/Level0/Players/Player").SetPhysicsProcess(true);
+		GetNode<CharacterBody2D>("/root/Level0/Players/Player2").SetPhysicsProcess(true);
 	}
 	
 }
